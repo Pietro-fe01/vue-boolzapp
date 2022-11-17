@@ -43,6 +43,9 @@ aside.left-side{
     background-color: yellow;
 }
 
+/*------------------
+    ASIDE PROFILE
+-------------------*/
 aside .profile{
     border-right: 1px solid #d6d6d6;
 }
@@ -55,6 +58,9 @@ aside .profile .profile__left h4{
     align-self: center;
 }
 
+/*------------------
+    ASIDE BANNER
+-------------------*/
 aside .banner-desktop{
     background-color: #8edafc;
     display: flex;
@@ -77,8 +83,42 @@ aside .banner-desktop__info{
     align-self: center;
 }
 
-aside .banner-desktop__info small{
-    text-decoration: underline;
+aside .banner-desktop__info a{
+    text-decoration-color: #6b7376;
+}
+
+/*---------------------
+    ASIDE SEARCH FORM
+----------------------*/
+.search-in-contacts{
+    background-color: #fafafa;
+    padding: .5rem;
+    display: flex;
+}
+
+.search-in-contacts button{
+    padding: .4375rem 1.875rem;
+    cursor: pointer;
+}
+
+.search-in-contacts button i{
+    color: #b1b1b1;
+    font-weight: bolder;
+}
+
+.search-in-contacts input{
+    height: 100%;
+    flex-grow: 1;
+    padding: .4375rem .625rem;
+}
+
+.search-in-contacts input:focus{
+    outline: none;
+}
+
+.search-in-contacts button,
+.search-in-contacts input{
+    border: 1px solid rgba(128, 128, 128, 0.1);
 }
 
 /*------------------
