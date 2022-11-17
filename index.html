@@ -56,7 +56,7 @@
 
                     <!-- Qui andranno tutti i contatti salvati -->
                     <div class="list-contacts">
-                        <div class="list-contacts__info" v-for="contact in contacts">
+                        <div class="list-contacts__info" :class="{'chat-showed' : index === currentContact}" v-for="(contact, index) in contacts" @click="openChat(index)">
                             <div class="list-contacts__info__user">
                                 <img class="profile-img" :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                                 <div>

@@ -140,6 +140,7 @@ aside .banner-desktop__info a{
     justify-content: space-between;
     padding: .625rem 1.25rem;
     border-bottom: 1px solid #f5f5f5;
+    cursor: pointer;
 }
 
 .chat-showed{
