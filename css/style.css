@@ -10,7 +10,7 @@
 body{
     font-family: 'Lato', sans-serif;
     height: 100vh;
-    background: linear-gradient(180deg, rgba(0,150,136,1) 13%, rgba(214,219,216,1) 13%);
+    background: linear-gradient(180deg, rgba(0,150,136,1) 20%, rgba(214,219,216,1) 20%);
 }
 
 #app{
@@ -24,7 +24,7 @@ body{
 .container {
     margin: auto;
     width: 100%;
-    max-width: 80rem;
+    max-width: 81.25rem;
     height: calc(100% - 50px);
 }
 
@@ -39,7 +39,7 @@ body{
     ASIDE
 -------------------*/
 aside.left-side{
-    width: 30%;
+    width: 35%;
     background-color: yellow;
 }
 
@@ -55,11 +55,37 @@ aside .profile .profile__left h4{
     align-self: center;
 }
 
+aside .banner-desktop{
+    background-color: #8edafc;
+    display: flex;
+    padding: .9375rem 1.25rem;
+}
+
+aside .banner-desktop i{
+    background-color: #f2fbff;
+    color: #8edafc;
+    border-radius: 50%;
+    width: 3.125rem;
+    height: 3.125rem;
+    text-align: center;
+    line-height: 3.125rem;
+    font-size: 1.25rem;
+    margin-right: .625rem;
+}
+
+aside .banner-desktop__info{
+    align-self: center;
+}
+
+aside .banner-desktop__info small{
+    text-decoration: underline;
+}
+
 /*------------------
     MAIN - CHAT
 -------------------*/
 .right-side{
-    width: 70%;
+    width: 65%;
     background-color: green;
 }
 
@@ -69,10 +95,6 @@ aside .profile .profile__left h4{
 
 .chat-info-contact__details{
     align-self: center;
-}
-
-.chat-info-contact__details small{
-    color: #6b7376;
 }
 
 /*-------------------------------
@@ -98,4 +120,10 @@ img.profile-img{
     max-width: 3.125rem;
     border-radius: 50%;
     margin-right: .625rem;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+aside .banner-desktop__info small,
+main .chat-info-contact__details small{
+    color: #6b7376;
 }
