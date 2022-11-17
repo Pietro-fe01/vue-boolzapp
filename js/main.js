@@ -175,5 +175,5 @@ createApp({
         openChat: function(i){
             this.currentContact = i;
         }
-    },
+    }
 }).mount('#app')

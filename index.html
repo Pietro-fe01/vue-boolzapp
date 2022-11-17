@@ -61,7 +61,7 @@
                                 <img class="profile-img" :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                                 <div>
                                     <h4>{{contact.name}}</h4>
-                                    <small>Ultimo messaggio inviato</small>
+                                    <small>{{ contact.messages[contact.messages.length - 1].message }}</small>
                                 </div>
                             </div>
                             <div class="list-contacts__info__date">
