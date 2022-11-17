@@ -167,7 +167,11 @@ createApp({
                         }
                     ],
                 }
-            ]
+            ],
+            currentContact: 0,
         }
-    }
+    },
+    methods: {
+
+    },
 }).mount('#app')

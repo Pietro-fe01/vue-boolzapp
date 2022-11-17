@@ -56,102 +56,11 @@
 
                     <!-- Qui andranno tutti i contatti salvati -->
                     <div class="list-contacts">
-                        <div class="list-contacts__info chat-showed">
+                        <div class="list-contacts__info" v-for="contact in contacts">
                             <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_1.jpg" alt="michele_avatar_pic">
+                                <img class="profile-img" :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                                 <div>
-                                    <h4>Michele</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_2.jpg" alt="fabio_avatar_pic">
-                                <div>
-                                    <h4>Fabio</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_3.jpg" alt="samuele_avatar_pic">
-                                <div>
-                                    <h4>Samuele</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_4.jpg" alt="alessandroB_avatar_pic">
-                                <div>
-                                    <h4>Alessandro B.</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_5.jpg" alt="alessandroL_avatar_pic">
-                                <div>
-                                    <h4>Alessandro L.</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_6.jpg" alt="claudia_avatar_pic">
-                                <div>
-                                    <h4>Claudia</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_7.jpg" alt="federico_avatar_pic">
-                                <div>
-                                    <h4>Federico</h4>
-                                    <small>Ultimo messaggio inviato</small>
-                                </div>
-                            </div>
-                            <div class="list-contacts__info__date">
-                                <small>12:00</small>
-                            </div>
-                        </div>
-
-                        <div class="list-contacts__info">
-                            <div class="list-contacts__info__user">
-                                <img class="profile-img" src="img/avatar_8.jpg" alt="davide_avatar_pic">
-                                <div>
-                                    <h4>Davide</h4>
+                                    <h4>{{contact.name}}</h4>
                                     <small>Ultimo messaggio inviato</small>
                                 </div>
                             </div>
@@ -170,9 +79,9 @@
                     <div class="chat-container">
                         <div class="chat-info-contact">
                             <div class="chat-info-contact__pic d-flex">
-                                <img class="profile-img" src="img/avatar_1.jpg" alt="michele_avatar_pic">
+                                <img class="profile-img" :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="`${contacts[currentContact].name}_avatar_pic`">
                                 <div class="chat-info-contact__details">
-                                    <h4>Michele</h4>
+                                    <h4>{{contacts[currentContact].name}}</h4>
                                     <small>Ultimo accesso oggi alle 12:00</small>
                                 </div>
                             </div>
@@ -184,26 +93,20 @@
                         </div>
 
                         <div class="field-output-message">
-                            <div class="text-message sent">
-                                <p>Hai portato a spasso il cane?</p>
-                                <small class="sending-time">15:30</small>
-                            </div>
-
-                            <div class="text-message sent">
-                                <p>Ricordati di stendere i panni</p>
-                                <small class="sending-time">15:30</small>
-                            </div>
-
-                            <div class="text-message received">
-                                <p>Tutto fatto!</p>
-                                <small class="sending-time">15:30</small>
+                            <div class="text-message" v-for="message in contacts[currentContact].messages" :class="message.status">
+                                <p>{{ message.message }}</p>
+                                <small class="sending-time">{{ message.date }}</small>
                             </div>
                         </div>
 
-                        <form class="field-input-message">
-                            <i class="fa-regular fa-face-smile"></i>
+                        <form class="field-input-message" @submit.prevent="">
+                            <button>
+                                <i class="fa-regular fa-face-smile"></i>
+                            </button>
                             <input type="text" placeholder="Scrivi un messaggio">
-                            <i class="fa-solid fa-microphone"></i>
+                            <button>
+                                <i class="fa-solid fa-microphone"></i>
+                            </button>
                         </form>
                     </div>
                     <!-- /all info showed chat on the right -->

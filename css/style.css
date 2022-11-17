@@ -224,6 +224,11 @@ aside .banner-desktop__info a{
     padding: .3125rem 1.5625rem;
 }
 
+.field-input-message button{
+    background-color: transparent;
+    border: none;
+}
+
 .field-input-message i{ 
     color: #6b7376;
     font-size: 1.25rem;
