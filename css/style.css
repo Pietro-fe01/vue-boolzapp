@@ -9,4 +9,22 @@
 
 body{
     font-family: 'Lato', sans-serif;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(0,150,136,1) 13%, rgba(214,219,216,1) 13%);
 }
+
+#app{
+    display: flex;
+    height: 100%;
+}
+
+/*----------------
+    COMMON   
+-----------------*/
+.container {
+    margin: auto;
+    background-color: red;
+    max-width: 80rem;
+    height: calc(100% - 50px);
+}
+
