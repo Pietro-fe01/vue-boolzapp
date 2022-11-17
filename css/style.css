@@ -19,12 +19,83 @@ body{
 }
 
 /*----------------
-    COMMON   
+    COMMONS  
 -----------------*/
 .container {
     margin: auto;
-    background-color: red;
+    width: 100%;
     max-width: 80rem;
     height: calc(100% - 50px);
 }
 
+/*----------------
+    UTILITIES  
+-----------------*/
+.d-flex{
+    display: flex;
+}
+
+/*------------------
+    ASIDE
+-------------------*/
+aside.left-side{
+    width: 30%;
+    background-color: yellow;
+}
+
+aside .profile{
+    border-right: 1px solid #d6d6d6;
+}
+
+aside .profile .profile__left{
+    display: flex;
+}
+
+aside .profile .profile__left h4{
+    align-self: center;
+}
+
+/*------------------
+    MAIN - CHAT
+-------------------*/
+.right-side{
+    width: 70%;
+    background-color: green;
+}
+
+.chat-info-contact{
+    border-left: 1px solid #d6d6d6;
+}
+
+.chat-info-contact__details{
+    align-self: center;
+}
+
+.chat-info-contact__details small{
+    color: #6b7376;
+}
+
+/*-------------------------------
+    ASIDE (LEFT) & MAIN (RIGHT)
+--------------------------------*/
+aside .profile,
+main .chat-info-contact{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: .625rem .9375rem;
+    background-color: #eaeaea;
+}
+
+aside .profile__right i,
+main .showed-chat__info__settings i{
+    cursor: pointer;
+    color: #b1b1b1;
+    margin-left: .9375rem;
+}
+
+img.profile-img{
+    max-width: 3.125rem;
+    border-radius: 50%;
+    margin-right: .625rem;
+}
