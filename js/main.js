@@ -169,6 +169,8 @@ createApp({
                 }
             ],
             currentContact: 0,
+            sendMessage: '',
+            
         }
     },
     methods: {

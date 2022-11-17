@@ -229,6 +229,7 @@ aside .banner-desktop__info a{
     justify-content: space-around;
     align-items: center;
     padding: .3125rem 1.5625rem;
+    background-color: #f3eeea;
 }
 
 .field-input-message button{

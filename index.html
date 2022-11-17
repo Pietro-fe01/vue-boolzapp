@@ -103,9 +103,10 @@
                             <button>
                                 <i class="fa-regular fa-face-smile"></i>
                             </button>
-                            <input type="text" placeholder="Scrivi un messaggio">
+                            <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio">
                             <button>
-                                <i class="fa-solid fa-microphone"></i>
+                                <i v-if="sendMessage === ''" class="fa-solid fa-microphone"></i>
+                                <i v-else class="fa-solid fa-share"></i>
                             </button>
                         </form>
                     </div>
