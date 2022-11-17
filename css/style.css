@@ -139,6 +139,11 @@ aside .banner-desktop__info a{
     display: flex;
     justify-content: space-between;
     padding: .625rem 1.25rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.chat-showed{
+    background-color: rgb(235, 235, 235);
 }
 
 .list-contacts__info__user{
@@ -149,9 +154,9 @@ aside .banner-desktop__info a{
     color: #b6c4d4;
 }
 
-/*------------------
-    MAIN - CHAT
--------------------*/
+/*--------------------
+    MAIN INFO CONTACT
+---------------------*/
 .right-side{
     width: 65%;
 }
@@ -170,10 +175,46 @@ aside .banner-desktop__info a{
     align-self: center;
 }
 
+/*--------------------------
+    MAIN FIELD OUTPUT&INPUT
+---------------------------*/
 .field-output-message{
+    padding: 1.875rem;
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column ;
+}
+
+.field-output-message .text-message{
+    padding: .1875rem .625rem;
+    border-radius: .9375rem;
+    margin-bottom: .8125rem;
+    max-width: 55%;
+    display: flex;
+}
+
+.field-output-message .text-message p{
+    padding: 10px;
+}
+
+.sent{
+    background-color: #d5f9ba;
+    align-self: flex-end;
+    border-top-right-radius: 0 !important;
+}
+
+.field-output-message .sending-time{
+    color: #b9b9bb;
+    align-self: flex-end;
+    font-size: .625rem;
+}
+
+.received{
+    background-color: white;
+    align-self: flex-start;
+    border-top-left-radius: 0 !important;
 }
 
 .field-input-message{
