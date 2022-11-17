@@ -56,6 +56,12 @@ aside .profile .profile__left{
     display: flex;
 }
 
+aside .profile .profile__left img{
+    width: 3.125rem;
+    height: 3.125rem;
+    object-fit: cover;
+}
+
 aside .profile .profile__left h4{
     align-self: center;
 }
