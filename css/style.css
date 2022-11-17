@@ -40,7 +40,7 @@ body{
 -------------------*/
 aside.left-side{
     width: 35%;
-    background-color: yellow;
+    flex-direction: column;
 }
 
 /*------------------
@@ -71,11 +71,11 @@ aside .banner-desktop i{
     background-color: #f2fbff;
     color: #8edafc;
     border-radius: 50%;
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 2.8125rem;
+    height: 2.8125rem;
     text-align: center;
-    line-height: 3.125rem;
-    font-size: 1.25rem;
+    line-height: 2.8125rem;
+    font-size: 1.125rem;
     margin-right: .625rem;
 }
 
@@ -121,6 +121,29 @@ aside .banner-desktop__info a{
     border: 1px solid rgba(128, 128, 128, 0.1);
 }
 
+/*---------------------
+    ASIDE CONTACTS
+----------------------*/
+.list-contacts{
+    background-color: white;
+    flex-grow: 1;
+    overflow-y: scroll;
+}
+
+.list-contacts__info{
+    display: flex;
+    justify-content: space-between;
+    padding: .625rem 1.25rem;
+}
+
+.list-contacts__info__user{
+    display: flex;
+}
+
+.list-contacts__info small{
+    color: #b6c4d4;
+}
+
 /*------------------
     MAIN - CHAT
 -------------------*/
@@ -160,7 +183,6 @@ img.profile-img{
     max-width: 3.125rem;
     border-radius: 50%;
     margin-right: .625rem;
-    border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 aside .banner-desktop__info small,
