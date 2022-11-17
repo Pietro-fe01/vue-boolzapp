@@ -1,3 +1,5 @@
+@import url(effects.css);
+
 /*----------------
     RESET   
 -----------------*/
@@ -99,17 +101,20 @@ aside .banner-desktop__info a{
 .search-in-contacts button{
     padding: .4375rem 1.875rem;
     cursor: pointer;
+    border-top-left-radius: .3125rem;
+    border-bottom-left-radius: .3125rem;
 }
 
 .search-in-contacts button i{
     color: #b1b1b1;
-    font-weight: bolder;
 }
 
 .search-in-contacts input{
     height: 100%;
     flex-grow: 1;
     padding: .4375rem .625rem;
+    border-top-right-radius: .3125rem;
+    border-bottom-right-radius: .3125rem;
 }
 
 .search-in-contacts input:focus{
@@ -149,7 +154,12 @@ aside .banner-desktop__info a{
 -------------------*/
 .right-side{
     width: 65%;
-    background-color: green;
+}
+
+.chat-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .chat-info-contact{
@@ -158,6 +168,43 @@ aside .banner-desktop__info a{
 
 .chat-info-contact__details{
     align-self: center;
+}
+
+.field-output-message{
+    flex-grow: 1;
+    background-image: url('../img/mine.jpg');
+    overflow-y: scroll;
+}
+
+.field-input-message{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .3125rem 1.5625rem;
+}
+
+.field-input-message i{ 
+    color: #6b7376;
+    font-size: 1.25rem;
+    cursor: pointer;
+    text-align: center;
+    width: 3.125rem;
+    height: 2.1875rem;
+    line-height: 2.1875rem;
+    border-radius: .3125rem;
+    transition: background 0.3s;
+}
+
+.field-input-message input{
+    flex-grow: 1;
+    margin: 0 1.5625rem;
+    padding: .9375rem;
+    border-radius: .625rem;
+    border: 1px solid rgba(128, 128, 128, 0.1);
+}
+
+.field-input-message input:focus{
+    outline: none;
 }
 
 /*-------------------------------
