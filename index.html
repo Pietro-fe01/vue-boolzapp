@@ -26,6 +26,11 @@
             <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
             <link rel="icon" type="image/x-icon" href="favicon/site.webmanifest">
         <!-- /Favicon boolean -->
+
+        <!-- Moment JS -->
+        <script src="https://momentjs.com/downloads/moment.js"></script>
+        <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+        <!-- Moment JS -->
     </head>
     <body>
         <div id="app">
@@ -74,7 +79,7 @@
                                 </div>
                             </div>
                             <div class="list-contacts__info__date">
-                                <small>12:00</small>
+                                <small>{{ contact.messages[contact.messages.length - 1].date.substring(11,16) }}</small>
                             </div>
                         </div>
                     </div>
@@ -106,7 +111,8 @@
                                 <p>{{ message.message }}</p>
                                 <div class="message-info">
                                     <i class="fa-solid fa-chevron-up" @click="isClicked(message)"></i>
-                                    <small class="sending-time">{{ message.date }}</small>
+                                    <!-- <small class="sending-time">{{ message.date }}</small> -->
+                                    <small class="sending-time">{{ formatMessageData(message) }}</small>
 
                                     <!-- Dropdown menu on click message -->
                                     <div class="drop-down-open" v-if="message.clicked">

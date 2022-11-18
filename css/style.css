@@ -242,8 +242,8 @@ aside .banner-desktop__info a{
     background-color: white;
     border: 1px solid black;
     position: absolute;
-    top: 1.5625rem;
-    left: 12%;
+    top: 1.875rem;
+    left: -64px;
     width: 160px;
     text-align: center;
     border-radius: .625rem;

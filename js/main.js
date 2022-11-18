@@ -235,7 +235,7 @@ createApp({
         sendNewMessage: function(){
             if(this.sendMessage !== ''){
                 const createNewMessage = new this.newMessage(
-                    new Date().toLocaleString(),
+                    moment(new Date).format(),
                     this.sendMessage,
                     'sent',
                     false
@@ -250,7 +250,7 @@ createApp({
         receiveMessage: function(){
             setTimeout(() =>{
                 const createNewReceiveMessage = new this.newMessage(
-                    new Date().toLocaleString(), 
+                    moment(new Date).format(), 
                     'Okay',
                     'received',
                     false
@@ -272,6 +272,14 @@ createApp({
         },
         deleteMessage: function(i){
             this.contacts[this.currentContact].messages.splice(i, 1)
+        },
+        formatMessageData: function(message){
+            console.log(moment(new Date).format())
+            console.log(new Date)
+            return message.date.substring(11,16);
         }
+    },
+    created(){
+        moment.locale('it');
     }
 }).mount('#app')
