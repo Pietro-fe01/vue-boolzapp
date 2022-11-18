@@ -178,6 +178,7 @@ createApp({
                 }
             },
             filterName: '',
+            clicked: false
         }
     },
     methods: {
@@ -233,6 +234,14 @@ createApp({
                 );
                 this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
             }, 1000)
+        },
+        isClicked: function(message){
+            console.log(message.message)
+            if(this.clicked === false){
+                return this.clicked = true;
+            } else {
+                return this.clicked = false;
+            }
         }
     }
 }).mount('#app')

@@ -38,6 +38,10 @@ body{
     display: flex;
 }
 
+.d-none{
+    display: none;
+}
+
 /*------------------
     ASIDE
 -------------------*/
@@ -211,6 +215,30 @@ aside .banner-desktop__info a{
     margin-bottom: .8125rem;
     max-width: 55%;
     display: flex;
+}
+
+.text-message .message-info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    position: relative;
+}
+
+.text-message .message-info i{
+    font-size: .8125rem;
+    padding: .1875rem;
+    opacity: 0;
+}
+
+.text-message:hover i{
+    opacity: 1;
+}
+
+.drop-down-open{
+    background-color: red;
+    position: absolute;
+    top: 50px;
 }
 
 .field-output-message .text-message p{
