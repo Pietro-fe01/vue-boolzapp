@@ -180,21 +180,24 @@ createApp({
         }
     },
     methods: {
+        // Al click di un contatto viene mostrata la relativa chat sulla destra
         openChat: function(i){
             this.currentContact = i;
         },
+        // Questa funzione serve per creare un nuovo messaggio 'sent' in base al testo inserito in input
         sendNewMessage: function(){
             if(this.sendMessage !== ''){
-                const createNewMessage = new this.newMessage(new Date().toLocaleString(), this.sendMessage, 'sent');
+                const createNewMessage = new this.newMessage(new Date().toLocaleString(), this.sendMessage.charAt(0).toUpperCase() + this.sendMessage.slice(1), 'sent');
                 this.contacts[this.currentContact].messages.push(createNewMessage);
                 this.sendMessage = '';
 
                 this.receiveMessage();
             }
         },
+        //Questa funzione invia un messaggio all'utente dopo 1 secondo dall'invio del suo messaggio 'sent'
         receiveMessage: function(){
             setTimeout(() =>{
-                const createNewReceiveMessage = new this.newMessage(new Date().toLocaleString(), 'okay', 'received');
+                const createNewReceiveMessage = new this.newMessage(new Date().toLocaleString(), 'Okay', 'received');
                 this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
             }, 1000)
         }
