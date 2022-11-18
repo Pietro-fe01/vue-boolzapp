@@ -214,7 +214,7 @@ createApp({
             if(this.sendMessage !== ''){
                 const createNewMessage = new this.newMessage(
                     new Date().toLocaleString(),
-                    this.sendMessage.charAt(0).toUpperCase() + this.sendMessage.slice(1),
+                    this.sendMessage,
                     'sent'
                 );
                 this.contacts[this.currentContact].messages.push(createNewMessage);

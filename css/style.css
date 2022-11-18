@@ -23,11 +23,12 @@ body{
 /*----------------
     COMMONS  
 -----------------*/
-.container {
+.ms-container {
     margin: auto;
     width: 100%;
     max-width: 81.25rem;
     height: calc(100% - 50px);
+    display: flex;
 }
 
 /*----------------
@@ -42,6 +43,7 @@ body{
 -------------------*/
 aside.left-side{
     width: 35%;
+    display: flex;
     flex-direction: column;
 }
 
@@ -162,6 +164,7 @@ aside .banner-desktop__info a{
 }
 
 .list-contacts__info__user #last-msg{
+    margin-top: .1875rem;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
