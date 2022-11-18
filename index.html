@@ -51,12 +51,12 @@
 
                     <form class="search-in-contacts" @submit.prevent="">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input type="text" placeholder="Cerca o inizia una nuova chat">
+                        <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName" @keyup="filteringListContacts" @keyup.delete="cancLetter">
                     </form>
 
                     <!-- Qui andranno tutti i contatti salvati -->
                     <div class="list-contacts">
-                        <div class="list-contacts__info" :class="{'chat-showed' : index === currentContact}" v-for="(contact, index) in contacts" @click="openChat(index)">
+                        <div v-show="contact.visible" class="list-contacts__info" :class="{'chat-showed' : index === currentContact}" v-for="(contact, index) in contacts" @click="openChat(index)">
                             <div class="list-contacts__info__user">
                                 <img class="profile-img" :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                                 <div>

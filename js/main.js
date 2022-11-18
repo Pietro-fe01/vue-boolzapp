@@ -176,7 +176,8 @@ createApp({
                     this.message = message;
                     this.status = status;
                 }
-            }
+            },
+            filterName: '',
         }
     },
     methods: {
@@ -184,10 +185,38 @@ createApp({
         openChat: function(i){
             this.currentContact = i;
         },
+        // Funzione che filtra i contatti in base alle lettere contenute nel nome salvatoS
+        filteringListContacts: function(){
+            if (this.filterName === ''){
+                for(let i=0; i<this.contacts.length; i++){
+                    this.contacts[i].visible = true;
+                }
+            } else {
+                for(let i=0; i<this.contacts.length; i++){
+                    if(!this.contacts[i].name.toLowerCase().includes(this.filterName.toLowerCase())){
+                        this.contacts[i].visible = false;   
+                    }
+                }
+            }
+        },
+        // Funzione che riaggiorna i contatti salvati con quel nome quando viene cancellata una lettera
+        cancLetter: function(){
+            if(this.filterName !== ''){
+                for(let i=0; i<this.contacts.length; i++){
+                    if(this.contacts[i].name.toLowerCase().includes(this.filterName.toLowerCase())){
+                        this.contacts[i].visible = true;
+                    }
+                }
+            }
+        },
         // Questa funzione serve per creare un nuovo messaggio 'sent' in base al testo inserito in input
         sendNewMessage: function(){
             if(this.sendMessage !== ''){
-                const createNewMessage = new this.newMessage(new Date().toLocaleString(), this.sendMessage.charAt(0).toUpperCase() + this.sendMessage.slice(1), 'sent');
+                const createNewMessage = new this.newMessage(
+                    new Date().toLocaleString(),
+                    this.sendMessage.charAt(0).toUpperCase() + this.sendMessage.slice(1),
+                    'sent'
+                );
                 this.contacts[this.currentContact].messages.push(createNewMessage);
                 this.sendMessage = '';
 
@@ -197,7 +226,11 @@ createApp({
         //Questa funzione invia un messaggio all'utente dopo 1 secondo dall'invio del suo messaggio 'sent'
         receiveMessage: function(){
             setTimeout(() =>{
-                const createNewReceiveMessage = new this.newMessage(new Date().toLocaleString(), 'Okay', 'received');
+                const createNewReceiveMessage = new this.newMessage(
+                    new Date().toLocaleString(), 
+                    'Okay',
+                    'received'
+                );
                 this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
             }, 1000)
         }
