@@ -102,14 +102,24 @@
                         </div>
 
                         <div class="field-output-message">
-                            <div class="text-message" v-for="(message, index) in contacts[currentContact].messages" :class="message.status">
+                            <div class="text-message" v-for="(message, index) in contacts[currentContact].messages" :class="message.status" @mouseleave="openDropDown(message)">
                                 <p>{{ message.message }}</p>
                                 <div class="message-info">
-                                    <i class="fa-solid fa-chevron-down" @click="isClicked(message)"></i>
-                                    <div class="drop-down-open" v-show="clicked === true">
-                                        ciao
-                                    </div>
+                                    <i class="fa-solid fa-chevron-up" @click="isClicked(message)"></i>
                                     <small class="sending-time">{{ message.date }}</small>
+
+                                    <!-- Dropdown menu on click message -->
+                                    <div class="drop-down-open" v-if="message.clicked">
+                                        <ul>
+                                            <li><i class="fa-solid fa-share"></i> Rispondi</li>
+                                            <li><i class="fa-solid fa-copy"></i> Copia</li>
+                                            <li><i class="fa-solid fa-face-smile"></i> Regisci al messaggio</li>
+                                            <li><i class="fa-solid fa-paper-plane"></i> Inoltra</li>
+                                            <li><i class="fa-solid fa-star"></i> Importante</li>
+                                            <li @click="deleteMessage(index)"><i class="fa-solid fa-trash-can"></i> Elimina</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Dropdown menu on click message -->
                                 </div>
                             </div>
                         </div>

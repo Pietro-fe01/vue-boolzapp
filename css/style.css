@@ -201,7 +201,7 @@ aside .banner-desktop__info a{
     MAIN FIELD OUTPUT&INPUT
 ---------------------------*/
 .field-output-message{
-    padding: 2.5rem 4.375rem;
+    padding: 2.5rem 5rem;
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
     overflow-y: auto;
@@ -225,20 +225,48 @@ aside .banner-desktop__info a{
     position: relative;
 }
 
-.text-message .message-info i{
+.text-message .message-info .fa-chevron-up{
     font-size: .8125rem;
     padding: .1875rem;
     opacity: 0;
+    cursor: pointer;
 }
 
-.text-message:hover i{
+.text-message:hover .fa-chevron-up{
     opacity: 1;
+    rotate: 180deg;
+    transition: rotate 0.5s;
 }
 
 .drop-down-open{
-    background-color: red;
+    background-color: white;
+    border: 1px solid black;
     position: absolute;
-    top: 50px;
+    top: 1.5625rem;
+    left: 12%;
+    width: 160px;
+    text-align: center;
+    border-radius: .625rem;
+    z-index: 100;
+}
+
+.drop-down-open ul{
+    list-style: none;
+}
+
+.drop-down-open ul li{
+    cursor: pointer;
+    padding: .625rem .4375rem;
+    font-size: .75rem;
+}
+
+.drop-down-open ul li i{
+    margin-right: .3125rem;
+}
+
+.drop-down-open ul li:nth-child(3),
+.drop-down-open ul li:last-child{
+    border-top: 1px solid rgba(0, 0, 0, 0.2)
 }
 
 .field-output-message .text-message p{
