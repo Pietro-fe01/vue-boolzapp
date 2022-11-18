@@ -170,12 +170,33 @@ createApp({
             ],
             currentContact: 0,
             sendMessage: '',
-            
+            newMessage: class {
+                constructor(date, message, status){
+                    this.date = date;
+                    this.message = message;
+                    this.status = status;
+                }
+            }
         }
     },
     methods: {
         openChat: function(i){
             this.currentContact = i;
+        },
+        sendNewMessage: function(){
+            if(this.sendMessage !== ''){
+                const createNewMessage = new this.newMessage(new Date().toLocaleString(), this.sendMessage, 'sent');
+                this.contacts[this.currentContact].messages.push(createNewMessage);
+                this.sendMessage = '';
+
+                this.receiveMessage();
+            }
+        },
+        receiveMessage: function(){
+            setTimeout(() =>{
+                const createNewReceiveMessage = new this.newMessage(new Date().toLocaleString(), 'okay', 'received');
+                this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
+            }, 1000)
         }
     }
 }).mount('#app')

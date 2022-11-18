@@ -138,14 +138,14 @@ aside .banner-desktop__info a{
 .list-contacts{
     background-color: white;
     flex-grow: 1;
-    overflow-y: scroll;
+    overflow-y: auto;
 }
 
 .list-contacts__info{
     display: flex;
     justify-content: space-between;
     padding: .625rem 1.25rem;
-    border-bottom: 1px solid #f5f5f5;
+    border-top: 1px solid #f5f5f5;
     cursor: pointer;
 }
 
@@ -159,6 +159,14 @@ aside .banner-desktop__info a{
 
 .list-contacts__info small{
     color: #b6c4d4;
+}
+
+.list-contacts__info__user #last-msg{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    max-width: 270px;
+    display: inline-block;
 }
 
 /*--------------------
@@ -186,10 +194,10 @@ aside .banner-desktop__info a{
     MAIN FIELD OUTPUT&INPUT
 ---------------------------*/
 .field-output-message{
-    padding: 1.875rem;
+    padding: 2.5rem 4.375rem;
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
-    overflow-y: scroll;
+    overflow-y: auto;
     display: flex;
     flex-direction: column ;
 }

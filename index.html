@@ -61,7 +61,7 @@
                                 <img class="profile-img" :src="`img/avatar${contact.avatar}.jpg`" :alt="`${contact.name}_avatar_pic`">
                                 <div>
                                     <h4>{{contact.name}}</h4>
-                                    <small>{{ contact.messages[contact.messages.length - 1].message }}</small>
+                                    <small id="last-msg">{{ contact.messages[contact.messages.length - 1].message }}</small>
                                 </div>
                             </div>
                             <div class="list-contacts__info__date">
@@ -103,10 +103,10 @@
                             <button>
                                 <i class="fa-regular fa-face-smile"></i>
                             </button>
-                            <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio">
-                            <button>
+                            <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
+                            <button type="submit">
                                 <i v-if="sendMessage === ''" class="fa-solid fa-microphone"></i>
-                                <i v-else class="fa-solid fa-share"></i>
+                                <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>
                             </button>
                         </form>
                     </div>
