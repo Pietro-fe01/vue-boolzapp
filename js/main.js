@@ -289,8 +289,22 @@ createApp({
         formatMessageData: function(message){
             return message.date.substring(11,16);
         },
+        // Al click dell'icona smile si apre il menù delle emoji
         emojiField: function(){
             this.picker.togglePicker()
+        },
+        // Funzione che chiede l'autorizzazione per l'accesso al microfono
+        getLocalStream: function() {
+            navigator.mediaDevices
+            .getUserMedia({ video: false, audio: true })
+            .then((stream) => {
+                window.localStream = stream;
+                window.localAudio.srcObject = stream;
+                window.localAudio.autoplay = true;
+            })
+            .catch((err) => {
+                console.error(`you got an error: ${err}`);
+            });
         }
     },
     created(){

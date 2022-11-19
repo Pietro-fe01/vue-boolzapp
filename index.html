@@ -132,12 +132,12 @@
                         </div>
 
                         <form class="field-input-message" @submit.prevent="">
-                            <div @click="emojiField">
-                                <i class="fa-regular fa-face-smile"></i>
-                            </div>
+                            <button>
+                                <i class="fa-regular fa-face-smile" @click="emojiField"></i>
+                            </button>
                             <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" autofocus>
                             <button type="submit">
-                                <i v-if="sendMessage === ''" class="fa-solid fa-microphone"></i>
+                                <i v-if="sendMessage === ''" class="fa-solid fa-microphone" @click="getLocalStream"></i>
                                 <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>
                             </button>
                         </form>
