@@ -232,7 +232,7 @@ createApp({
                 }
             }
         },
-        // Funzione che ritorna l'ultimo accesso del contatto in abse all'ultimo messaggio inviato
+        // Funzione che ritorna l'ultimo accesso del contatto in base all'ultimo messaggio inviato
         lastAccess: function(){
             for(let i = this.contacts[this.currentContact].messages.length - 1; i>=0; i-- ){
                 if(this.contacts[this.currentContact].messages[i].status === 'received'){
