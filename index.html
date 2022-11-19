@@ -27,9 +27,12 @@
             <link rel="icon" type="image/x-icon" href="favicon/site.webmanifest">
         <!-- /Favicon boolean -->
         <!-- Moment JS -->
-        <script src="https://momentjs.com/downloads/moment.js"></script>
-        <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+            <script src="https://momentjs.com/downloads/moment.js"></script>
+            <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
         <!-- Moment JS -->
+        <!-- Emoji CDN -->
+            <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
+        <!-- /Emoji CDN -->
     </head>
     <body>
         <div id="app">
@@ -129,10 +132,10 @@
                         </div>
 
                         <form class="field-input-message" @submit.prevent="">
-                            <button>
+                            <button @click="emojiField">
                                 <i class="fa-regular fa-face-smile"></i>
                             </button>
-                            <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
+                            <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" autofocus>
                             <button type="submit">
                                 <i v-if="sendMessage === ''" class="fa-solid fa-microphone"></i>
                                 <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>

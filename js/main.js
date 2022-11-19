@@ -200,6 +200,7 @@ createApp({
                 }
             },
             filterName: '',
+            picker: new EmojiButton()
         }
     },
     methods: {
@@ -279,9 +280,17 @@ createApp({
         // Funzione che formatta le date dei messaggi mostrando hh:mm
         formatMessageData: function(message){
             return message.date.substring(11,16);
+        },
+        emojiField: function(){
+            this.picker.togglePicker()
         }
     },
     created(){
         moment.locale('it');
+        this.picker.on('emoji', emoji => {
+            console.log(emoji)
+            this.sendMessage = this.sendMessage + emoji;
+        });
     }
 }).mount('#app')
+
