@@ -258,6 +258,7 @@ createApp({
                 this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
             }, 1000)
         },
+        // Al click della freccia di un messaggio viene mostrato il dropdown
         isClicked: function(message){
             if(message.clicked === false){
                 return message.clicked = true;
@@ -265,17 +266,18 @@ createApp({
                 return message.clicked = false;
             }
         },
-        openDropDown: function(message){
+        // Se il dropdown è stato aperto e si esce dal box del messaggio il menù si chiude
+        closeDropDown: function(message){
             if(message.clicked){
                 return message.clicked = false;
             }
         },
+        // Funzione per eliminare il messaggio aperto tramite dropdown
         deleteMessage: function(i){
             this.contacts[this.currentContact].messages.splice(i, 1)
         },
+        // Funzione che formatta le date dei messaggi mostrando hh:mm
         formatMessageData: function(message){
-            console.log(moment(new Date).format())
-            console.log(new Date)
             return message.date.substring(11,16);
         }
     },

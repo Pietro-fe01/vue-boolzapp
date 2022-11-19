@@ -26,7 +26,6 @@
             <link rel="icon" type="image/x-icon" href="favicon/favicon.ico">
             <link rel="icon" type="image/x-icon" href="favicon/site.webmanifest">
         <!-- /Favicon boolean -->
-
         <!-- Moment JS -->
         <script src="https://momentjs.com/downloads/moment.js"></script>
         <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
@@ -107,11 +106,10 @@
                         </div>
 
                         <div class="field-output-message">
-                            <div class="text-message" v-for="(message, index) in contacts[currentContact].messages" :class="message.status" @mouseleave="openDropDown(message)">
+                            <div class="text-message" v-for="(message, index) in contacts[currentContact].messages" :class="message.status" @mouseleave="closeDropDown(message)">
                                 <p>{{ message.message }}</p>
                                 <div class="message-info">
                                     <i class="fa-solid fa-chevron-up" @click="isClicked(message)"></i>
-                                    <!-- <small class="sending-time">{{ message.date }}</small> -->
                                     <small class="sending-time">{{ formatMessageData(message) }}</small>
 
                                     <!-- Dropdown menu on click message -->
