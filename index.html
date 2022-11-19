@@ -98,7 +98,7 @@
                                 <img class="profile-img" :src="`img/avatar${contacts[currentContact].avatar}.jpg`" :alt="`${contacts[currentContact].name}_avatar_pic`">
                                 <div class="chat-info-contact__details">
                                     <h4>{{contacts[currentContact].name}}</h4>
-                                    <small>Ultimo accesso oggi alle 12:00</small>
+                                    <small>Ultimo accesso {{ lastAccess() }}</small>
                                 </div>
                             </div>
                             <div class="showed-chat__info__settings">

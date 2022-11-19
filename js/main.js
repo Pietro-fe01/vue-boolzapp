@@ -232,6 +232,14 @@ createApp({
                 }
             }
         },
+        // Funzione che ritorna l'ultimo accesso del contatto in abse all'ultimo messaggio inviato
+        lastAccess: function(){
+            for(let i = this.contacts[this.currentContact].messages.length - 1; i>=0; i-- ){
+                if(this.contacts[this.currentContact].messages[i].status === 'received'){
+                    return this.contacts[this.currentContact].messages[i].date.substring(11,16);
+                }
+            }
+        },
         // Questa funzione serve per creare un nuovo messaggio 'sent' in base al testo inserito in input
         sendNewMessage: function(){
             if(this.sendMessage !== ''){
