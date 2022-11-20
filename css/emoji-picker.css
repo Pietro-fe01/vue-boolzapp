@@ -1,0 +1,19 @@
+/*-------------------------------
+    EMOJI PICKER CUSTOM
+--------------------------------*/
+.emoji-picker{
+    position: absolute !important;
+    bottom: 12% !important;
+    left: 28.5% !important;
+    width: 25rem !important;
+}
+
+.emoji-picker__content{
+    overflow-y: clip;
+}
+
+.emoji-picker__preview{
+    height: 45px !important;
+    padding: 0 !important;
+    justify-content: center !important;
+}

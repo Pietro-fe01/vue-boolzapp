@@ -1,4 +1,5 @@
 @import url(effects.css);
+@import url(emoji-picker.css);
 
 /*----------------
     RESET   
@@ -60,6 +61,7 @@ aside .profile{
 
 aside .profile .profile__left{
     display: flex;
+    cursor: pointer;
 }
 
 aside .profile .profile__left img{
@@ -104,24 +106,24 @@ aside .banner-desktop__info a{
 /*---------------------
     ASIDE SEARCH FORM
 ----------------------*/
-.search-in-contacts{
+aside .search-in-contacts{
     background-color: #fafafa;
     padding: .5rem;
     display: flex;
 }
 
-.search-in-contacts button{
+aside .search-in-contacts button{
     padding: .4375rem 1.875rem;
     cursor: pointer;
     border-top-left-radius: .3125rem;
     border-bottom-left-radius: .3125rem;
 }
 
-.search-in-contacts button i{
+aside .search-in-contacts button i{
     color: #b1b1b1;
 }
 
-.search-in-contacts input{
+aside .search-in-contacts input{
     height: 100%;
     flex-grow: 1;
     padding: .4375rem .625rem;
@@ -129,25 +131,25 @@ aside .banner-desktop__info a{
     border-bottom-right-radius: .3125rem;
 }
 
-.search-in-contacts input:focus{
+aside .search-in-contacts input:focus{
     outline: none;
 }
 
-.search-in-contacts button,
-.search-in-contacts input{
+aside .search-in-contacts button,
+aside .search-in-contacts input{
     border: 1px solid rgba(128, 128, 128, 0.1);
 }
 
 /*---------------------
     ASIDE CONTACTS
 ----------------------*/
-.list-contacts{
+aside .list-contacts{
     background-color: white;
     flex-grow: 1;
     overflow-y: auto;
 }
 
-.list-contacts__info{
+aside .list-contacts__info{
     display: flex;
     justify-content: space-between;
     padding: .625rem 1.25rem;
@@ -155,19 +157,19 @@ aside .banner-desktop__info a{
     cursor: pointer;
 }
 
-.chat-showed{
+aside .chat-showed{
     background-color: rgb(235, 235, 235);
 }
 
-.list-contacts__info__user{
+aside .list-contacts__info__user{
     display: flex;
 }
 
-.list-contacts__info small{
+aside .list-contacts__info small{
     color: #b6c4d4;
 }
 
-.list-contacts__info__user #last-msg{
+aside .list-contacts__info__user #last-msg{
     margin-top: .1875rem;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -179,28 +181,28 @@ aside .banner-desktop__info a{
 /*--------------------
     MAIN INFO CONTACT
 ---------------------*/
-.right-side{
+main.right-side{
     width: 65%;
 }
 
-.chat-container{
+main .chat-container{
     display: flex;
     flex-direction: column;
     height: 100%;
 }
 
-.chat-info-contact{
+main .chat-info-contact{
     border-left: 1px solid #d6d6d6;
 }
 
-.chat-info-contact__details{
+main .chat-info-contact__details{
     align-self: center;
 }
 
 /*--------------------------
     MAIN FIELD OUTPUT&INPUT
 ---------------------------*/
-.field-output-message{
+main .field-output-message{
     padding: 2.5rem 5rem;
     flex-grow: 1;
     background-image: url('../img/mine.jpg');
@@ -209,7 +211,7 @@ aside .banner-desktop__info a{
     flex-direction: column ;
 }
 
-.field-output-message .text-message{
+main .field-output-message .text-message{
     padding: .1875rem .625rem;
     border-radius: .9375rem;
     margin-bottom: .8125rem;
@@ -217,7 +219,7 @@ aside .banner-desktop__info a{
     display: flex;
 }
 
-.text-message .message-info{
+main .text-message .message-info{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -225,20 +227,20 @@ aside .banner-desktop__info a{
     position: relative;
 }
 
-.text-message .message-info .fa-chevron-up{
+main .text-message .message-info .fa-chevron-up{
     font-size: .8125rem;
     padding: .1875rem;
     opacity: 0;
     cursor: pointer;
 }
 
-.text-message:hover .fa-chevron-up{
+main .text-message:hover .fa-chevron-up{
     opacity: 1;
     rotate: 180deg;
     transition: rotate 0.5s;
 }
 
-.drop-down-open{
+main .drop-down-open{
     background-color: white;
     border: 1px solid black;
     position: absolute;
@@ -250,48 +252,48 @@ aside .banner-desktop__info a{
     z-index: 100;
 }
 
-.drop-down-open ul{
+main .drop-down-open ul{
     list-style: none;
 }
 
-.drop-down-open ul li{
+main .drop-down-open ul li{
     cursor: pointer;
     padding: .625rem .4375rem;
     font-size: .75rem;
 }
 
-.drop-down-open ul li i{
+main .drop-down-open ul li i{
     margin-right: .3125rem;
 }
 
-.drop-down-open ul li:nth-child(3),
-.drop-down-open ul li:last-child{
+main .drop-down-open ul li:nth-child(3),
+main .drop-down-open ul li:last-child{
     border-top: 1px solid rgba(0, 0, 0, 0.2)
 }
 
-.field-output-message .text-message p{
+main .field-output-message .text-message p{
     padding: 10px;
 }
 
-.sent{
+main .sent{
     background-color: #d5f9ba;
     align-self: flex-end;
     border-top-right-radius: 0 !important;
 }
 
-.field-output-message .sending-time{
+main .field-output-message .sending-time{
     color: #b9b9bb;
     align-self: flex-end;
     font-size: .625rem;
 }
 
-.received{
+main .received{
     background-color: white;
     align-self: flex-start;
     border-top-left-radius: 0 !important;
 }
 
-.field-input-message{
+main .field-input-message{
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -299,12 +301,12 @@ aside .banner-desktop__info a{
     background-color: #f3eeea;
 }
 
-.field-input-message button{
+main .field-input-message button{
     background-color: transparent;
     border: none;
 }
 
-.field-input-message i{ 
+main .field-input-message i{ 
     color: #6b7376;
     font-size: 1.25rem;
     cursor: pointer;
@@ -316,7 +318,7 @@ aside .banner-desktop__info a{
     transition: background 0.3s;
 }
 
-.field-input-message input{
+main .field-input-message input{
     flex-grow: 1;
     margin: 0 1.5625rem;
     padding: .9375rem;
@@ -324,7 +326,7 @@ aside .banner-desktop__info a{
     border: 1px solid rgba(128, 128, 128, 0.1);
 }
 
-.field-input-message input:focus{
+main .field-input-message input:focus{
     outline: none;
 }
 
@@ -356,24 +358,4 @@ img.profile-img{
 aside .banner-desktop__info small,
 main .chat-info-contact__details small{
     color: #6b7376;
-}
-
-/*-------------------------------
-    EMOJI PICKER
---------------------------------*/
-.emoji-picker{
-    position: absolute !important;
-    bottom: 12% !important;
-    left: 28.5% !important;
-    width: 25rem !important;
-}
-
-.emoji-picker__content{
-    overflow-y: clip;
-}
-
-.emoji-picker__preview{
-    height: 45px !important;
-    padding: 0 !important;
-    justify-content: center !important;
 }
