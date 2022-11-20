@@ -1,15 +1,15 @@
 /*---------------------
     ASIDE CONTACTS
 ----------------------*/
-.list-contacts__info:not(.chat-showed):hover{
+aside .list-contacts__info:not(.chat-showed):hover{
     background-color: rgba(235, 235, 235, 0.5);
 }
 
 /*--------------------------
     MAIN FIELD OUTPUT&INPUT
 ---------------------------*/
-.drop-down-open ul li:hover,
-.field-input-message i:hover{
+main .drop-down-open ul li:hover,
+main .field-input-message i:hover{
     background-color: rgba(128, 128, 128, 0.3);
 }
 

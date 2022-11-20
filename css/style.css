@@ -273,6 +273,7 @@ main .drop-down-open ul li:last-child{
 
 main .field-output-message .text-message p{
     padding: 10px;
+    word-break: break-all;
 }
 
 main .sent{
@@ -330,9 +331,9 @@ main .field-input-message input:focus{
     outline: none;
 }
 
-/*-------------------------------
-    ASIDE (LEFT) & MAIN (RIGHT)
---------------------------------*/
+/*----------------------------------------
+    ASIDE (LEFT) & MAIN (RIGHT) IN COMMON
+-----------------------------------------*/
 aside .profile,
 main .chat-info-contact{
     display: flex;
@@ -359,3 +360,31 @@ aside .banner-desktop__info small,
 main .chat-info-contact__details small{
     color: #6b7376;
 }
+
+/*--------------------
+    SCROLLBAR CUSTOM
+---------------------*/
+::-webkit-scrollbar {
+    width: 7px;
+    cursor: grab;
+}
+
+::-webkit-scrollbar {
+    cursor:pointer;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: darkgray;
+    border-radius: .625rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.5);
+} 
