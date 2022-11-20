@@ -65,10 +65,12 @@
                     </div>
                     <!-- /Banner notifiche desktop -->
 
+                    <!-- Barra di ricerca per i contatti -->
                     <form class="search-in-contacts" @submit.prevent="">
                         <button><i class="fa-solid fa-magnifying-glass"></i></button>
                         <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="filterName" @keyup="filteringListContacts" @keyup.delete="cancLetter">
                     </form>
+                    <!-- /Barra di ricerca per i contatti -->
 
                     <!-- Qui andranno tutti i contatti salvati -->
                     <div class="list-contacts">
@@ -132,7 +134,7 @@
                         </div>
 
                         <form class="field-input-message" @submit.prevent="">
-                            <button>
+                            <button type="button">
                                 <i class="fa-regular fa-face-smile" @click="emojiField"></i>
                             </button>
                             <input v-model="sendMessage" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" autofocus>

@@ -309,8 +309,8 @@ createApp({
     },
     created(){
         moment.locale('it');
+        // Questa funzione copia la emoji cliccata nella barra di inserimento dei messaggi
         this.picker.on('emoji', emoji => {
-            console.log(emoji)
             this.sendMessage = this.sendMessage + emoji;
         });
     }
