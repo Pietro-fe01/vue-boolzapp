@@ -30,6 +30,12 @@ main .chat-info-contact .showed-chat__info__settings i:hover{
 /*--------------------------
     MAIN FIELD OUTPUT&INPUT
 ---------------------------*/
+main .text-message:hover .react-message .react-icon,
+main .react-message:hover .react-icon{
+    opacity: 1;
+    cursor: pointer;
+}
+
 main .drop-down-open ul li:hover,
 main .field-input-message i:hover{
     background-color: rgba(128, 128, 128, 0.3);

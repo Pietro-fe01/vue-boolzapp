@@ -240,9 +240,14 @@ main .field-output-message{
 main .field-output-message .text-message{
     padding: .1875rem .625rem;
     border-radius: .9375rem;
-    margin-bottom: .8125rem;
+    margin-bottom: 1.25rem;
     max-width: 55%;
     display: flex;
+    position: relative;
+}
+
+main .field-output-message .text-message.sent{
+    padding-bottom: .4375rem;
 }
 
 main .text-message .message-info{
@@ -253,11 +258,17 @@ main .text-message .message-info{
     position: relative;
 }
 
-main .text-message .message-info .fa-chevron-up{
-    font-size: .8125rem;
+main .text-message .fa-chevron-up{
+    font-size: .625rem;
     padding: .1875rem;
     opacity: 0;
     cursor: pointer;
+}
+
+main .text-message:hover .fa-chevron-up{
+    opacity: 1;
+    rotate: 180deg;
+    transition: rotate 0.5s;
 }
 
 main .field-output-message .text-message p{
@@ -277,12 +288,6 @@ main .message-info #favourite-star{
     color: rgb(255, 255, 0);
     filter: drop-shadow(0px 0px 0.5px black);
     transform: translate(0px, -1px);
-}
-
-main .text-message:hover .fa-chevron-up{
-    opacity: 1;
-    rotate: 180deg;
-    transition: rotate 0.5s;
 }
 
 main .drop-down-open{
@@ -370,6 +375,67 @@ main .field-input-message input{
 
 main .field-input-message input:focus{
     outline: none;
+}
+
+main .text-message.received .react-message,
+main .text-message.sent .react-message{
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+main .text-message.received .react-message{
+    right: -55px;
+}
+
+main .text-message.sent .react-message{
+    left: -15px;
+}
+
+main .text-message .react-message .react-icon{
+    color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    padding: .625rem;
+}
+
+main .react-message .drop-down-react{
+    position: absolute;
+    top: -35px;
+    left: -105px;
+    display: flex;
+    background-color: grey;
+    padding: .3125rem .625rem;
+    border-radius: 1.875rem;
+}
+
+main .react-message .drop-down-react button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin: 0 .3125rem;
+}
+
+main .react-message .drop-down-react button span{
+    font-size: 1.25rem;
+}
+
+main .selected-reaction{
+    position: absolute;
+    border-radius: 50%;
+    padding: .0625rem;
+    background-color: lightgray;
+}
+
+main .text-message.received .selected-reaction{
+    left: 13px;
+    bottom: -15px;
+    border: 1px solid white;
+}
+
+main .text-message.sent .selected-reaction{
+    right: 13px;
+    bottom: -18px;
+    border: 1px solid rgb(213, 249, 186);
 }
 
 /*----------------------------------------

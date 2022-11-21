@@ -16,21 +16,27 @@ createApp({
                             message: 'Hai portato a spasso il cane?',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'Ricordati di stendere i panni',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 16:15:22',
                             message: 'Tutto fatto!',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -44,21 +50,27 @@ createApp({
                             message: 'Ciao come stai?',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '20/03/2020 16:30:55',
                             message: 'Bene grazie! Stasera ci vediamo?',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '20/03/2020 16:35:00',
                             message: 'Mi piacerebbe ma devo andare a fare la spesa.',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -72,21 +84,27 @@ createApp({
                             message: 'La Marianna va in campagna',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '28/03/2020 10:20:10',
                             message: 'Sicuro di non aver sbagliato chat?',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '28/03/2020 16:15:22',
                             message: 'Ah scusa!',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -100,14 +118,18 @@ createApp({
                             message: 'Lo sai che ha aperto una nuova pizzeria?',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'Si, ma preferirei andare al cinema',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -121,14 +143,18 @@ createApp({
                             message: 'Ricordati di chiamare la nonna',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'Va bene, stasera la sento',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -142,21 +168,27 @@ createApp({
                             message: 'Ciao Claudia, hai novità?',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'Non ancora',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:51:00',
                             message: 'Nessuna nuova, buona nuova',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -170,14 +202,18 @@ createApp({
                             message: 'Fai gli auguri a Martina che è il suo compleanno!',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'Grazie per avermelo ricordato, le scrivo subito!',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 },
@@ -191,21 +227,27 @@ createApp({
                             message: 'Ciao, andiamo a mangiare la pizza stasera?',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             message: 'No, l\'ho già mangiata ieri, ordiniamo sushi!',
                             status: 'sent',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         },
                         {
                             date: '10/01/2020 15:51:00',
                             message: 'OK!!',
                             status: 'received',
                             clicked: false,
-                            isPref: false
+                            isPref: false,
+                            reactionsOpen: false,
+                            reactEmojiField: ''
                         }
                     ],
                 }
@@ -213,16 +255,18 @@ createApp({
             currentContact: 0,
             sendMessage: '',
             newMessage: class {
-                constructor(date, message, status, clicked, isPref){
+                constructor(date, message, status, clicked, isPref, reactionsOpen){
                     this.date = date;
                     this.message = message;
                     this.status = status;
                     this.clicked = clicked;
                     this.isPref = isPref;
+                    this.reactionsOpen = reactionsOpen;
                 }
             },
             filterName: '',
             picker: new EmojiButton(),
+            reactEmojiList: ['x', '👍', '❤️', '😂', '😯', '😢', '🙏'],
         }
     },
     methods: {
@@ -270,7 +314,9 @@ createApp({
                     this.sendMessage,
                     'sent',
                     false,
-                    false
+                    false,
+                    false,
+                    ''
                 );
                 this.contacts[this.currentContact].messages.push(createNewMessage);
                 this.sendMessage = '';
@@ -289,7 +335,9 @@ createApp({
                         response.data.value,
                         'received',
                         false,
-                        false
+                        false,
+                        false,
+                        ''
                     );
                     this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
                 });
@@ -357,6 +405,23 @@ createApp({
                 message.isPref = false;
             }
             message.clicked = false;
+        },
+        // Al click del pulsante emoji si aprono le reazioni del messaggio cliccato
+        openReactions: function(message){
+            if(message.reactionsOpen === true){
+                message.reactionsOpen = false;
+            } else {
+                message.reactionsOpen = true;
+            }
+        },
+        // In base alla reazione cliccata la stampa sul messaggio
+        selectReaction: function(message, emojiClicked){
+            if(emojiClicked === 'x'){
+                message.reactEmojiField = '';
+            } else {
+                message.reactEmojiField = emojiClicked
+            }
+            message.reactionsOpen = false; 
         }
     },
     created(){

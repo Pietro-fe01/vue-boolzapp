@@ -154,6 +154,26 @@
                                     </div>
                                     <!-- Dropdown menu on click message -->
                                 </div>
+
+                                <!-- Reazioni ai messaggi -->
+                                <div class="react-message">
+                                    <i class="react-icon fa-regular fa-face-smile" @click="openReactions(message)"></i>
+
+                                    <div v-if="message.reactionsOpen" class="drop-down-react">
+                                        <button v-for="emoji in reactEmojiList">
+                                            <span @click="selectReaction(message, emoji)">
+                                                {{ emoji }}
+                                            </span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- /Reazioni ai messaggi -->
+
+                                <!-- selected reaction -->
+                                <div v-if="message.reactEmojiField !== ''" class="selected-reaction">
+                                    {{ message.reactEmojiField }}
+                                </div>
+                                <!-- /selected reaction -->
                             </div>
                         </div>
 
