@@ -256,15 +256,19 @@ createApp({
             }
         },
         //Questa funzione invia un messaggio all'utente dopo 1 secondo dall'invio del suo messaggio 'sent'
+        // come risposta viene data una casuale da API Chuck Norris
         receiveMessage: function(){
             setTimeout(() =>{
-                const createNewReceiveMessage = new this.newMessage(
-                    moment(new Date).format(), 
-                    'Okay',
-                    'received',
-                    false
-                );
-                this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
+                axios.get('https://api.chucknorris.io/jokes/random')
+                .then((response) => {
+                    const createNewReceiveMessage = new this.newMessage(
+                        moment(new Date).format(), 
+                        response.data.value,
+                        'received',
+                        false
+                    );
+                    this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
+                });
             }, 1000)
         },
         // Al click della freccia di un messaggio viene mostrato il dropdown
@@ -308,12 +312,14 @@ createApp({
         }
     },
     created(){
-        moment.locale('it');
+        moment.locale('it');        
+    },
+    mounted(){
         // Questa funzione copia la emoji cliccata nella barra di inserimento dei messaggi
         this.picker.on('emoji', emoji => {
             this.sendMessage = this.sendMessage + emoji;
             //Permette di immettere tante faccine fino al click al di fuori del box emoji
-            this.$refs.emojiInput.$el.focus()
+            this.$refs.emojiInput.$el.focus();
         });
     }
 }).mount('#app')

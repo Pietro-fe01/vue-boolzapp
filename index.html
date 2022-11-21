@@ -33,6 +33,9 @@
         <!-- Emoji CDN -->
             <script src="https://cdn.jsdelivr.net/npm/@joeattardi/emoji-button@3.0.3/dist/index.min.js"></script>
         <!-- /Emoji CDN -->
+        <!-- Axios CDN -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.20.0/axios.min.js"></script>
+        <!-- /Axios CDN -->
     </head>
     <body>
         <div id="app">
@@ -137,7 +140,7 @@
                             <button type="button">
                                 <i class="fa-regular fa-face-smile" @click="emojiField"></i>
                             </button>
-                            <input v-model="sendMessage" ref="emojiInput" type="text" placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage" autofocus>
+                            <input v-model="sendMessage" ref="emojiInput" type="text" autofocus placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
                             <button type="submit">
                                 <i v-if="sendMessage === ''" class="fa-solid fa-microphone" @click="getLocalStream"></i>
                                 <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>
