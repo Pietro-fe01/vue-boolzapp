@@ -118,7 +118,10 @@
                                 <p>{{ message.message }}</p>
                                 <div class="message-info">
                                     <i class="fa-solid fa-chevron-up" @click="isClicked(message)"></i>
-                                    <small class="sending-time">{{ formatMessageData(message) }}</small>
+                                    <div class="message-star-time">
+                                        <small :class="{'opacity-0' : !message.isPref}" id="favourite-star"><i class="fa-solid fa-star"></i></small id="favourite-star">
+                                        <small class="sending-time">{{ formatMessageData(message) }}</small>
+                                    </div>
 
                                     <!-- Dropdown menu on click message -->
                                     <div class="drop-down-open" v-if="message.clicked">
@@ -127,7 +130,7 @@
                                             <li id="copy-button" @click="copyText(message)"><i class="fa-solid fa-copy"></i> Copia</li>
                                             <li><i class="fa-solid fa-face-smile"></i> Regisci al messaggio</li>
                                             <li><i class="fa-solid fa-paper-plane"></i> Inoltra</li>
-                                            <li><i class="fa-solid fa-star"></i> Importante</li>
+                                            <li @click="setFavouriteMessage(message)"><i class="fa-solid fa-star"></i> Importante</li>
                                             <li @click="deleteMessage(index)"><i class="fa-solid fa-trash-can"></i> Elimina</li>
                                         </ul>
                                     </div>
