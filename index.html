@@ -126,12 +126,30 @@
                                     <!-- Dropdown menu on click message -->
                                     <div class="drop-down-open" v-if="message.clicked">
                                         <ul>
-                                            <li><i class="fa-solid fa-share"></i> Rispondi</li>
-                                            <li id="copy-button" @click="copyText(message)"><i class="fa-solid fa-copy"></i> Copia</li>
-                                            <li><i class="fa-solid fa-face-smile"></i> Regisci al messaggio</li>
-                                            <li><i class="fa-solid fa-paper-plane"></i> Inoltra</li>
-                                            <li @click="setFavouriteMessage(message)"><i class="fa-solid fa-star"></i> Importante</li>
-                                            <li @click="deleteMessage(index)"><i class="fa-solid fa-trash-can"></i> Elimina</li>
+                                            <!-- Answer button -->
+                                                <li><i class="fa-solid fa-share"></i> Rispondi</li>
+                                            <!-- /Answer button -->
+
+                                            <!-- Copy button -->
+                                                <li id="copy-button" @click="copyText(message)"><i class="fa-solid fa-copy"></i> Copia</li>
+                                            <!-- /Copy button -->
+
+                                            <!-- React button -->
+                                                <li><i class="fa-solid fa-face-smile"></i> Regisci al messaggio</li>
+                                            <!-- /React button -->
+
+                                            <!-- Inoltra button -->
+                                                <li><i class="fa-solid fa-paper-plane"></i> Inoltra</li>
+                                            <!-- /Inoltra button -->
+
+                                            <!-- Important button -->
+                                                <li v-if="!message.isPref" id="important-button" @click="setFavouriteMessage(message)"><i class="fa-solid fa-star"></i> Importante</li>
+                                                <li v-else id="important-button" @click="setFavouriteMessage(message)"><i class="fa-solid fa-star-half-stroke"></i> Non importante</li>
+                                            <!-- /Important button -->
+
+                                            <!-- Delete button -->
+                                                <li @click="deleteMessage(index)"><i class="fa-solid fa-trash-can"></i> Elimina</li>
+                                            <!-- /Delete button -->
                                         </ul>
                                     </div>
                                     <!-- Dropdown menu on click message -->
@@ -143,7 +161,7 @@
                             <button type="button">
                                 <i class="fa-regular fa-face-smile" @click="emojiField"></i>
                             </button>
-                            <input v-model="sendMessage" ref="emojiInput" type="text" size="1" autofocus placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
+                            <input ref="search" v-model="sendMessage" type="text" autofocus placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
                             <button type="submit">
                                 <i v-if="sendMessage === ''" class="fa-solid fa-microphone" @click="getLocalStream"></i>
                                 <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>

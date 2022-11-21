@@ -342,16 +342,20 @@ createApp({
         },
         // Funzione che copia il contenuto del messaggio selezionato
         copyText: function(message) {
-            const copiedSuccess = document.getElementById("copy-button");
-            copiedSuccess.innerHTML = `<i class="fa-solid fa-circle-check"></i> Messaggio copiato!`
+            const copiedButton = document.getElementById("copy-button");
+            copiedButton.innerHTML = `<i class="fa-solid fa-circle-check"></i> Messaggio copiato!`
             setTimeout(function(){
-                copiedSuccess.innerHTML = `<i class="fa-solid fa-copy"></i> Copia`
+                copiedButton.innerHTML = `<i class="fa-solid fa-copy"></i> Copia`
             }, 1500)
             return navigator.clipboard.writeText(message.message);
         },
         // Al click del tasto 'preferiti' comparirà una stella sul messaggio
         setFavouriteMessage: function(message){
-            message.isPref = !message.isPref;
+            if(message.isPref === false){
+                message.isPref = true;
+            } else {
+                message.isPref = false;
+            }
             message.clicked = false;
         }
     },
@@ -363,7 +367,7 @@ createApp({
         this.picker.on('emoji', emoji => {
             this.sendMessage = this.sendMessage + emoji;
             //Permette di immettere tante faccine fino al click al di fuori del box emoji
-            this.$refs.emojiInput.$el.focus();
+            this.$refs.search.$el.focus();
         });
     },
     // Richiama la funzione che scrolla verso il basso all'update
