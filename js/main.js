@@ -309,10 +309,16 @@ createApp({
             .catch((err) => {
                 console.error(`you got an error: ${err}`);
             });
+        },
+        // Funzione che scrolla automaticamenta verso il basso all'inserimento di messaggi
+        scrollToBottom: function(){
+            const chatOutputField = document.querySelector(".field-output-message");
+            let scrollHeight = chatOutputField.scrollHeight;
+            chatOutputField.scrollTop = scrollHeight;
         }
     },
     created(){
-        moment.locale('it');        
+        moment.locale('it');
     },
     mounted(){
         // Questa funzione copia la emoji cliccata nella barra di inserimento dei messaggi
@@ -321,6 +327,10 @@ createApp({
             //Permette di immettere tante faccine fino al click al di fuori del box emoji
             this.$refs.emojiInput.$el.focus();
         });
+    },
+    // Richiama la funzione che scrolla verso il basso all'update
+    updated(){
+        this.scrollToBottom();
     }
 }).mount('#app')
 
