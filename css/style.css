@@ -74,6 +74,10 @@ aside .profile .profile__left h4{
     align-self: center;
 }
 
+aside .profile__right i{
+    transition: transform 1s ease-out;
+}
+
 /*------------------
     ASIDE BANNER
 -------------------*/
@@ -101,6 +105,15 @@ aside .banner-desktop__info{
 
 aside .banner-desktop__info a{
     text-decoration-color: #6b7376;
+}
+
+aside .banner-desktop__info a{
+    color: rgb(107, 115, 118);
+    text-decoration-color: rgb(107, 115, 118);
+}
+
+aside .banner-desktop__info a:hover{
+
 }
 
 /*---------------------
@@ -197,6 +210,19 @@ main .chat-info-contact{
 
 main .chat-info-contact__details{
     align-self: center;
+}
+
+main .chat-info-contact__details small{
+    color: #6b7376;
+}
+
+main .chat-info-contact__pic .profile-img,
+main .chat-info-contact__pic h4{
+    cursor: pointer;
+}
+
+main .chat-info-contact .showed-chat__info__settings i{
+    transition: transform 1s ease-out;
 }
 
 /*--------------------------
@@ -356,35 +382,35 @@ img.profile-img{
     margin-right: .625rem;
 }
 
-aside .banner-desktop__info small,
-main .chat-info-contact__details small{
-    color: #6b7376;
-}
-
 /*--------------------
     SCROLLBAR CUSTOM
 ---------------------*/
-::-webkit-scrollbar {
+.list-contacts::-webkit-scrollbar,
+.field-output-message::-webkit-scrollbar{
     width: 7px;
     cursor: grab;
 }
 
-::-webkit-scrollbar {
+.list-contacts::-webkit-scrollbar,
+.field-output-message::-webkit-scrollbar{
     cursor:pointer;
 }
 
 /* Track */
-::-webkit-scrollbar-track {
+.list-contacts::-webkit-scrollbar-track,
+.field-output-message::-webkit-scrollbar-track{
     box-shadow: inset 0 0 5px transparent;
 }
 
 /* Handle */
-::-webkit-scrollbar-thumb {
+.list-contacts::-webkit-scrollbar-thumb,
+.field-output-message::-webkit-scrollbar-thumb{
     background: darkgray;
     border-radius: .625rem;
 }
 
 /* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
+.list-contacts::-webkit-scrollbar-thumb:hover,
+.field-output-message::-webkit-scrollbar-thumb:hover{
     background: rgba(0, 0, 0, 0.5);
 } 

@@ -1,8 +1,22 @@
+/*------------------
+    ASIDE PROFILE
+-------------------*/
+aside .profile__right i:hover{ 
+    transform: scale(-1, 1);
+}
+
 /*---------------------
     ASIDE CONTACTS
 ----------------------*/
 aside .list-contacts__info:not(.chat-showed):hover{
     background-color: rgba(235, 235, 235, 0.5);
+}
+
+/*--------------------
+    MAIN INFO CONTACT
+---------------------*/
+main .chat-info-contact .showed-chat__info__settings i:hover{
+    transform: scale(-1, 1);
 }
 
 /*--------------------------
