@@ -5,6 +5,14 @@ aside .profile__right i:hover{
     transform: scale(-1, 1);
 }
 
+/*------------------
+    ASIDE BANNER
+-------------------*/
+aside .banner-desktop__info a:hover{
+    color: black;
+    text-decoration-color: black;
+}
+
 /*---------------------
     ASIDE CONTACTS
 ----------------------*/

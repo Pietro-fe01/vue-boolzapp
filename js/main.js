@@ -315,6 +315,15 @@ createApp({
             const chatOutputField = document.querySelector(".field-output-message");
             let scrollHeight = chatOutputField.scrollHeight;
             chatOutputField.scrollTop = scrollHeight;
+        },
+        // Funzione che copia il contenuto del messaggio selezionato
+        copyText: function(message) {
+            const copiedSuccess = document.getElementById("copy-button");
+            copiedSuccess.innerHTML = `<i class="fa-solid fa-circle-check"></i> Messaggio copiato!`
+            setTimeout(function(){
+                copiedSuccess.innerHTML = `<i class="fa-solid fa-copy"></i> Copia`
+            }, 1500)
+            return navigator.clipboard.writeText(message.message);
         }
     },
     created(){

@@ -124,7 +124,7 @@
                                     <div class="drop-down-open" v-if="message.clicked">
                                         <ul>
                                             <li><i class="fa-solid fa-share"></i> Rispondi</li>
-                                            <li><i class="fa-solid fa-copy"></i> Copia</li>
+                                            <li id="copy-button" @click="copyText(message)"><i class="fa-solid fa-copy"></i> Copia</li>
                                             <li><i class="fa-solid fa-face-smile"></i> Regisci al messaggio</li>
                                             <li><i class="fa-solid fa-paper-plane"></i> Inoltra</li>
                                             <li><i class="fa-solid fa-star"></i> Importante</li>
@@ -140,7 +140,7 @@
                             <button type="button">
                                 <i class="fa-regular fa-face-smile" @click="emojiField"></i>
                             </button>
-                            <input v-model="sendMessage" ref="emojiInput" type="text" autofocus placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
+                            <input v-model="sendMessage" ref="emojiInput" type="text" size="1" autofocus placeholder="Scrivi un messaggio" @keyup.enter="sendNewMessage">
                             <button type="submit">
                                 <i v-if="sendMessage === ''" class="fa-solid fa-microphone" @click="getLocalStream"></i>
                                 <i v-else class="fa-solid fa-share" @click="sendNewMessage"></i>

@@ -108,12 +108,8 @@ aside .banner-desktop__info a{
 }
 
 aside .banner-desktop__info a{
-    color: rgb(107, 115, 118);
-    text-decoration-color: rgb(107, 115, 118);
-}
-
-aside .banner-desktop__info a:hover{
-
+    color: rgba(107, 115, 118, 1);
+    text-decoration-color: rgba(107, 115, 118, 1);
 }
 
 /*---------------------
@@ -299,7 +295,7 @@ main .drop-down-open ul li:last-child{
 
 main .field-output-message .text-message p{
     padding: 10px;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 main .sent{
@@ -351,6 +347,7 @@ main .field-input-message input{
     padding: .9375rem;
     border-radius: .625rem;
     border: 1px solid rgba(128, 128, 128, 0.1);
+    overflow: auto;
 }
 
 main .field-input-message input:focus{
