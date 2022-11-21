@@ -200,7 +200,7 @@ createApp({
                 }
             },
             filterName: '',
-            picker: new EmojiButton()
+            picker: new EmojiButton(),
         }
     },
     methods: {
@@ -312,6 +312,8 @@ createApp({
         // Questa funzione copia la emoji cliccata nella barra di inserimento dei messaggi
         this.picker.on('emoji', emoji => {
             this.sendMessage = this.sendMessage + emoji;
+            //Permette di immettere tante faccine fino al click al di fuori del box emoji
+            this.$refs.emojiInput.$el.focus()
         });
     }
 }).mount('#app')
