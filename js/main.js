@@ -266,7 +266,7 @@ createApp({
             },
             filterName: '',
             picker: new EmojiButton(),
-            reactEmojiList: ['x', '👍', '❤️', '😂', '😯', '😢', '🙏'],
+            reactEmojiList: [`<i class="fa-solid fa-ban"></i>`, '👍', '❤️', '😂', '😯', '😢', '🙏'],
         }
     },
     methods: {
@@ -417,12 +417,12 @@ createApp({
         },
         // In base alla reazione cliccata la stampa sul messaggio
         selectReaction: function(message, emojiClicked){
-            if(emojiClicked === 'x'){
+            if(emojiClicked === this.reactEmojiList[0]){
                 message.reactEmojiField = '';
             } else {
                 message.reactEmojiField = emojiClicked
             }
-            message.reactionsOpen = false; 
+            message.reactionsOpen = false;
         }
     },
     created(){

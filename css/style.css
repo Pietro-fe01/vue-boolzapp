@@ -408,6 +408,11 @@ main .react-message .drop-down-react{
     border-radius: 1.875rem;
 }
 
+main .react-message .drop-down-react .fa-solid.fa-ban{
+    transform: translate(0px, 2px);
+    color: rgba(0, 0, 0, 0.5);
+}
+
 main .react-message .drop-down-react button{
     background-color: transparent;
     border: none;
@@ -437,6 +442,7 @@ main .text-message.sent .selected-reaction{
     bottom: -18px;
     border: 1px solid rgb(213, 249, 186);
 }
+
 
 /*----------------------------------------
     ASIDE (LEFT) & MAIN (RIGHT) IN COMMON
