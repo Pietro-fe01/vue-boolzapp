@@ -321,12 +321,12 @@ createApp({
                 this.contacts[this.currentContact].messages.push(createNewMessage);
                 this.sendMessage = '';
 
-                this.receiveMessage();
+                this.receiveMessage(this.currentContact);
             }
         },
         //Questa funzione invia un messaggio all'utente dopo 1 secondo dall'invio del suo messaggio 'sent'
         // come risposta viene data una casuale da API Chuck Norris
-        receiveMessage: function(){
+        receiveMessage: function(currentContact){
             setTimeout(() =>{
                 axios.get('https://api.chucknorris.io/jokes/random')
                 .then((response) => {
@@ -339,7 +339,7 @@ createApp({
                         false,
                         ''
                     );
-                    this.contacts[this.currentContact].messages.push(createNewReceiveMessage);
+                    this.contacts[currentContact].messages.push(createNewReceiveMessage);
                 });
             }, 1000)
         },
