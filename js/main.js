@@ -413,6 +413,7 @@ createApp({
             } else {
                 message.reactionsOpen = true;
             }
+            message.clicked = false;
         },
         // In base alla reazione cliccata la stampa sul messaggio
         selectReaction: function(message, emojiClicked){
